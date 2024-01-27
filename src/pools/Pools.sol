@@ -49,10 +49,10 @@ contract Pools is IPools, ReentrancyGuard, PoolStats, ArbitrageSearch, Ownable
 	mapping(address=>mapping(IERC20=>uint256)) private _userDeposits;
 
 
-	constructor( IExchangeConfig _exchangeConfig, IPoolsConfig _poolsConfig )
-	ArbitrageSearch(_exchangeConfig)
-	PoolStats(_exchangeConfig, _poolsConfig)
-		{
+	constructor( IExchangeConfig _exchangeConfig, IPoolsConfig _poolsConfig ) {
+	ArbitrageSearch(_exchangeConfig);
+	PoolStats(_exchangeConfig, _poolsConfig);
+		
 		}
 
 
